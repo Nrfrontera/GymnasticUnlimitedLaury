@@ -257,6 +257,86 @@ h3 {
   gap: 18px;
 }
 
+.schedule-section {
+  padding-top: 54px;
+}
+
+.section-heading p:not(.eyebrow) {
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.schedule-card {
+  min-height: 300px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: 0 12px 40px rgba(18, 30, 64, 0.08);
+}
+
+.schedule-card.featured {
+  border-color: rgba(23, 70, 211, 0.28);
+  background: linear-gradient(180deg, #ffffff, #f4f8ff);
+}
+
+.schedule-card span {
+  display: inline-flex;
+  margin-bottom: 18px;
+  padding: 6px 10px;
+  color: var(--blue);
+  background: #edf3ff;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 900;
+}
+
+.schedule-card ul {
+  display: grid;
+  gap: 10px;
+  padding: 0;
+  margin: 18px 0;
+  list-style: none;
+}
+
+.schedule-card li {
+  display: grid;
+  gap: 2px;
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.schedule-card strong,
+.schedule-card em {
+  display: block;
+}
+
+.schedule-card strong {
+  color: var(--coral);
+  font-size: 1.2rem;
+  line-height: 1.1;
+}
+
+.schedule-card em {
+  color: var(--ink);
+  font-style: normal;
+  font-weight: 800;
+}
+
+.schedule-card p {
+  color: var(--muted);
+  margin: 0;
+}
+
 .program-card,
 .panel,
 .price-card,
@@ -578,6 +658,10 @@ address {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .schedule-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .about-hero {
     grid-template-columns: 1fr;
   }
@@ -616,6 +700,7 @@ address {
   }
 
   .program-grid,
+  .schedule-grid,
   .stats,
   .event-grid {
     grid-template-columns: 1fr;
